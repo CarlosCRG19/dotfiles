@@ -1,0 +1,3 @@
+alias 100L='cd ~/Desktop/100-ladrillos'
+alias git-100L='git config --global user.name "Carlos Rodriguez" && git config --global user.email "carlos.rodriguez@100ladrillos.com"'
+alias git-carlos='git config --global user.name "CarlosCRG19" && git config --global user.email "carloscrg19@gmail.com"'

@@ -13,6 +13,8 @@ set smartcase
 set ignorecase
 
 set showmatch "show matching part of pairs [] {} ()
+set noswapfile
+set clipboard+=unamedplus
 
 "set t_Co=256
 let g:airline_powerline_fonts = 1

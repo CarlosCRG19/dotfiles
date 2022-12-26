@@ -1,14 +1,22 @@
 #!/bin/bash
 
-rm -rf "$HOME/.config/nvim"
-ln -s "$HOME/dotfiles/nvim" "$HOME/.config"
+rm -rf "$XDG_CONFIG_HOME/X11"
+ln -s "$DOTFILES/X11" "$XDG_CONFIG_HOME"
 
-rm -rf "$HOME/.config/i3"
-ln -s "$HOME/dotfiles/i3" "$HOME/.config"
+rm -rf "$XDG_CONFIG_HOME/nvim"
+ln -s "$DOTFILES/nvim" "$XDG_CONFIG_HOME"
 
-rm -rf "$HOME/.config/alacritty"
-ln -s "$HOME/dotfiles/alacritty" "$HOME/.config"
+rm -rf "$XDG_CONFIG_HOME/i3"
+ln -s "$DOTFILES/i3" "$XDG_CONFIG_HOME"
 
-rm -rf "$HOME/.config/zsh"
-ln -s "$HOME/dotfiles/zsh" "$HOME/.config"
-ln -s "$HOME/dotfiles/zsh/.zshenv" "$HOME"
+rm -rf "$XDG_CONFIG_HOME/alacritty"
+ln -s "$DOTFILES/alacritty" "$XDG_CONFIG_HOME"
+
+rm -rf "$XDG_CONFIG_HOME/zsh"
+ln -s "$DOTFILES/zsh" "$XDG_CONFIG_HOME"
+
+rm -rf "$HOME/.zshenv"
+ln -s "$DOTFILES/zsh/.zshenv" "$HOME"
+
+mkdir -p "$XDG_DATA_HOME"
+cp -rf "$DOTFILES/fonts" "$XDG_DATA_HOME/fonts"

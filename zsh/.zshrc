@@ -1,6 +1,6 @@
 autoload -Uz colors && colors
 
-# Useful functions from https://github.com/ChristianChiarulli/Machfiles/blob/master/zsh/.config/zsh/zsh-aliases
+# Useful functions from https://github.com/ChristianChiarulli/Machfiles/blob/master/zsh
 source "$ZDOTDIR/zsh-functions"
 
 zsh_add_file "zsh-aliases"
@@ -21,7 +21,30 @@ setopt PUSHD_SILENT         # Do not print the directory stack after pushd or po
 
 # Enable vi mode
 bindkey -v
-export KEYTIMEOUT=1
+# export KEYTIMEOUT=1
 
 # turn on autocompletion system
 autoload -U compinit; compinit
+_comp_options+=(globdots)
+fpath=($ZDOTDIR/external $fpath)
+
+# vim keybindings
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M viins 'jk' vi-cmd-mode
+
+autoload -Uz cursor_mode && cursor_mode
+
+if [ "$(tty)" = "/dev/tty1" ];
+then
+    pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
+fi
+
+if [ $(command -v "fzf") ];
+then
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/fzf/key-bindings.zsh
+fi

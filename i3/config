@@ -1,7 +1,8 @@
 ###### i3 # ######
 
+exec_always --no-startup-id picom -CGb
 exec_always --no-startup-id autotiling
-exec_always --no-startup-id feh --no-fehbg --bg-fill --bg-scale $HOME/.config/i3/feh/background.png
+exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/.config/i3/feh/background.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ## --- Basic Definitions --- ##
@@ -20,6 +21,8 @@ set $lockwall sh ~/.config/i3/scripts/lock.sh
 
 set $black #000000
 set $white #ffffff
+
+font pango:Sauce Code Pro Nerd Font 12
 
 ## --- Border Configuration --- ##
 for_window [class="^.*"] border pixel 1

@@ -1,0 +1,70 @@
+colors:
+  primary:
+    background: "#292d3e"
+    foreground: "#abb2bf"
+
+  normal:
+    black: "#4C566A"
+    red: "#bf616a"
+    green: "#A3BE8C"
+    yellow: "#D7BA7D"
+    blue: "#5e81ac"
+    magenta: "#B48EAD"
+    cyan: "#88c0d0"
+    white: "#abb2bf"
+
+  bright:
+    black: "#4C566A"
+    red: "#bf616a"
+    green: "#A3BE8C"
+    yellow: "#D7BA7D"
+    blue: "#5e81ac"
+    magenta: "#B48EAD"
+    cyan: "#88c0d0"
+    white: "#abb2bf"
+
+cursor:
+  text: "#3B4252"
+cursor: "#ECEFF4"
+
+cursor:
+  style:
+    blinking: Never
+
+font:
+  normal:
+    family: Source Code Pro
+    style: Regular
+
+  bold:
+    family: Source Code Pro
+    style: Bold
+
+  italic:
+    family: Source Code Pro
+    style: Italic
+
+size: 11.0
+ligatures: true
+offset:
+  x: 0
+  y: 0
+glyph_offset:
+  x: 0
+  y: 0
+window:
+  opacity: 0.8
+history: 10000
+dynamic_title: true
+semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+save_to_clipboard: true
+live_config_reload: true
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+# - { key: Add, mods: Control, action: IncreaseFontSize }
+# - { key: Subtract, mods: Control, action: DecreaseFontSize }
+# - { key: N, mods: Control, action: SpawnNewInstance }

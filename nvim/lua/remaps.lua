@@ -19,3 +19,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>Y", "\"+Y")
+
+-- Move between buffers
+vim.keymap.set("n", "<S-l>", ":bn <cr>", { silent = true })
+vim.keymap.set("n", "<S-h>", ":bp <cr>", { silent = true })

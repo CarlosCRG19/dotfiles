@@ -2,7 +2,7 @@
 
 exec_always --no-startup-id picom -CGb
 exec_always --no-startup-id autotiling
-exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/.config/i3/feh/background.png
+exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/.config/i3/feh/background.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ## --- Basic Definitions --- ##
@@ -19,7 +19,7 @@ set $hibernate sudo systemctl hibernate
 set $lock i3lock
 set $lockwall sh ~/.config/i3/scripts/lock.sh
 
-set $black #000000
+set $black #090618
 set $white #ffffff
 
 font pango:Sauce Code Pro Nerd Font 12

@@ -49,4 +49,8 @@ return require('packer').startup(function(use)
         requires = { {'nvim-tree/nvim-web-devicons'} }
     }
     use { 'rebelot/kanagawa.nvim' }
+    use { 'windwp/nvim-autopairs' }
+    use { 'ray-x/go.nvim' }
+    use { 'lewis6991/gitsigns.nvim' }
+    use { 'tpope/vim-fugitive' }
 end)

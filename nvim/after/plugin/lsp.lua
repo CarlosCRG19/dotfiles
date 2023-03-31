@@ -5,6 +5,7 @@ lsp.preset("recommended")
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
     vim.keymap.set("n", "K", "<S-{>", opts)
+    vim.o.updatetime = 300
     vim.api.nvim_create_autocmd("CursorHold", {
       buffer = bufnr,
       callback = function()

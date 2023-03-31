@@ -8,7 +8,7 @@ vim.keymap.set("n", "<leader>|", "<C-w>v")
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Move current selection
-vim.keymap.set("v", "<S-jlsp zero>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<S-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<S-k>", ":m '<-2<CR>gv=gv")
 
 -- Keep search term in the middle

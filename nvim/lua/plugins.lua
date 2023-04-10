@@ -53,4 +53,5 @@ return require('packer').startup(function(use)
     use { 'ray-x/go.nvim' }
     use { 'lewis6991/gitsigns.nvim' }
     use { 'tpope/vim-fugitive' }
+    use { "zbirenbaum/copilot.lua" }
 end)

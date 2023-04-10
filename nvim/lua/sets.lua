@@ -26,3 +26,5 @@ vim.opt.showmatch = true
 vim.opt.mouse = 'a'
 
 vim.opt.encoding = 'utf-8'
+
+-- vim.g.copilot_assume_mapped = true

@@ -45,7 +45,7 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use {
-        'akinsho/bufferline.nvim', tag = "v3.*",
+        'akinsho/bufferline.nvim', tag = 'v3.*',
         requires = { {'nvim-tree/nvim-web-devicons'} }
     }
     use { 'rebelot/kanagawa.nvim' }
@@ -53,5 +53,5 @@ return require('packer').startup(function(use)
     use { 'ray-x/go.nvim' }
     use { 'lewis6991/gitsigns.nvim' }
     use { 'tpope/vim-fugitive' }
-    use { "zbirenbaum/copilot.lua" }
+    use { 'github/copilot.vim' }
 end)

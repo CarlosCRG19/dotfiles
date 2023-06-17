@@ -1,1 +1,0 @@
--- get a prime number from input

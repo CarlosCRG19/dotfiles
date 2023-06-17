@@ -1,6 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -53,5 +50,10 @@ return require('packer').startup(function(use)
     use { 'ray-x/go.nvim' }
     use { 'lewis6991/gitsigns.nvim' }
     use { 'tpope/vim-fugitive' }
-    use { 'github/copilot.vim' }
+    use { 
+        'zbirenbaum/copilot.lua',
+        cmd = 'Copilot',
+        event = 'InsertEnter',
+    }
+    use { 'windwp/nvim-ts-autotag' }
 end)

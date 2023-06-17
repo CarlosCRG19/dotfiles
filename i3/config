@@ -5,6 +5,9 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/.config/i3/feh/background.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+exec_always "setxkbmap -layout us,latam"
+exec_always "setxkbmap -option 'grp:alt_shift_toggle'"
+
 ## --- Basic Definitions --- ##
 workspace_auto_back_and_forth yes
 set $inner_gaps 10
@@ -46,6 +49,15 @@ bindsym $mod+Shift+x    exec $lock
 
 bindsym $mod+d          exec --no-startup-id "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#005577' -sf '#EEEEEE' -fn 'monospace-10'"
 bindsym $mod+space      exec --no-startup-id rofi -modi run -show run
+
+bindsym Print exec "scrot 'scrot-%Y-%m-%d_%h-%m-%s_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots/ && xclip -t image/png ~/Pictures/Screenshots/$f -sel clip'"
+bindsym Shift+Print exec "scrot --select --line mode=edge 'scrot-%Y-%m-%d_%h-%m-%s_$wx$h_snip.png' -e 'mv $f ~/Pictures/Screenshots/ && xclip -t image/png ~/Pictures/Screenshots/$f -sel clip'"
+
+## --- Audio Key Bindings --- ##
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 ## --- Container Key Bindings --- ##
 
@@ -132,6 +144,7 @@ for_window [window_role="task_dialog"] floating enable
 for_window [class="Arandr"]            floating enable
 for_window [class="Pavucontrol"]       floating enable
 for_window [class="Pavucontrol"]       resize shrink left 100, resize shrink right 100, resize shrink up 50, resize shrink down 50
+for_window [title="^zoom$" class="[zoom]*"] floating enable
 
 ## --- Exit Menu -- ##
 set $mode_system \

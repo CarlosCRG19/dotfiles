@@ -15,3 +15,11 @@ export DOTFILES="$HOME/dotfiles"
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+export ENCORE_INSTALL="/home/carloscrg19/.encore"
+export PATH="$ENCORE_INSTALL/bin:$PATH"
+
+export TBB_INSTALL_DIR=/usr/lib/cmake/TBB
+#export TBB_INCLUDE=$TBB_INSTALL_DIR/include
+#export TBB_LIBRARY_RELEASE=$TBB_INSTALL_DIR/build/linux_intel64_clang_cc13.1.1_libc2.37_kernel6.3.4_release
+#export TBB_LIBRARY_DEBUG=$TBB_INSTALL_DIR/build/linux_intel64_clang_cc13.1.1_libc2.37_kernel6.3.4_debug

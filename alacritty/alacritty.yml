@@ -79,3 +79,6 @@ colors:
 
   cursor:
     text: "#3B4252"
+
+key_bindings:
+  - { key: N, mods: Control, action: SpawnNewInstance }

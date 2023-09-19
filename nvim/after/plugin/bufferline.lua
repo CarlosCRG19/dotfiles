@@ -1,6 +1,6 @@
 require("bufferline").setup({
     options = {
-        diagnostics = "nvm_lsp",
+        diagnostics = "nvim_lsp",
         offsets = {
             { filetype = "NvimTree" }
         }

@@ -3,6 +3,8 @@ vim.keymap.set("v", "jk", "<Esc>")
 
 vim.keymap.set("n", "<S-j>", "<S-}>")
 vim.keymap.set("n", "<S-k>", "<S-{>")
+
+-- Vertical split
 vim.keymap.set("n", "<leader>|", "<C-w>v")
 
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })

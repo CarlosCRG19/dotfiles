@@ -1,14 +1,15 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
+    use {'wbthomason/packer.nvim'}
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/playground')
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use('nvim-treesitter/playground')
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -47,13 +48,21 @@ return require('packer').startup(function(use)
     }
     use { 'rebelot/kanagawa.nvim' }
     use { 'windwp/nvim-autopairs' }
-    use { 'ray-x/go.nvim' }
+
     use { 'lewis6991/gitsigns.nvim' }
     use { 'tpope/vim-fugitive' }
-    use { 
-        'zbirenbaum/copilot.lua',
-        cmd = 'Copilot',
-        event = 'InsertEnter',
-    }
+
+    -- use { 
+    -- 'zbirenbaum/copilot.lua',
+        --cmd = 'Copilot',
+        --event = 'InsertEnter',
+    --}
+
     use { 'windwp/nvim-ts-autotag' }
+    use { 'ray-x/go.nvim' }
+
+    use {
+        'jose-elias-alvarez/null-ls.nvim',
+        requires = { 'nvim-lua/plenary.nvim' },
+    }
 end)

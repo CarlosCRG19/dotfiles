@@ -1,10 +1,7 @@
-local lsp = require("lsp-zero")
-
-lsp.preset("recommended")
+local lsp = require("lsp-zero").preset({})
 
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
-    vim.keymap.set("n", "K", "<S-{>", opts)
     vim.o.updatetime = 300
     vim.api.nvim_create_autocmd("CursorHold", {
       buffer = bufnr,
@@ -21,7 +18,6 @@ lsp.on_attach(function(client, bufnr)
       end
     })
 end)
-
 
 lsp.setup()
 

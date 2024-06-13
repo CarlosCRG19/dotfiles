@@ -2,5 +2,15 @@ alias 100L='cd ~/Desktop/100-ladrillos'
 alias git-100L='git config --global user.name "Carlos Rodriguez" && git config --global user.email "carlos.rodriguez@100ladrillos.com"'
 alias git-carlos='git config --global user.name "CarlosCRG19" && git config --global user.email "carloscrg19@gmail.com"'
 
+# Ruby
+alias rbtest="bundle exec rspec"
+alias rblint="bundle exec rubocop"
+alias rball="rblint && rbtest"
+alias rbserver="rails server --binding 0.0.0.0 --port 3000"
+alias rbgraph="bundle exec rake graphql:dump_schemas"
+
+alias flowwer="cd ~/Desktop/flowwer/"
+alias diary="cd ~/Desktop/flowwer/diary && nvim \"diary-$(date --rfc-3339=date)-$(date +%a).md\""
+
 alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd+${index}"; unset index

@@ -3,7 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
@@ -51,4 +51,24 @@ return require('packer').startup(function(use)
     use { 'lewis6991/gitsigns.nvim' }
     use { 'tpope/vim-fugitive' }
     use { 'windwp/nvim-ts-autotag' }
+    use {
+        'jose-elias-alvarez/null-ls.nvim',
+        requires = { 'nvim-lua/plenary.nvim' },
+    }
+    use {
+        'nvim-neotest/neotest',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'nvim-treesitter/nvim-treesitter',
+            'antoinemadec/FixCursorHold.nvim'
+        }
+    }
+    use { 'nvim-neotest/neotest-python' }
+    use { 'github/copilot.vim' }
+    use { 'lukas-reineke/indent-blankline.nvim' }
+    use { 'tpope/vim-rails' }
+    use({
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn['mkdp#util#install']() end,
+    })
 end)

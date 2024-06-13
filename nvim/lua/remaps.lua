@@ -25,4 +25,5 @@ vim.keymap.set("n", "<S-l>", ":bn <cr>", { silent = true })
 vim.keymap.set("n", "<S-h>", ":bp <cr>", { silent = true })
 
 -- GitHub Copilot accept
-vim.keymap.set("i", "<Alt-Tab>", "copilot#Accept('<CR>')", { expr=true, silent=true })
+-- vim.keymap.set("i", "<Alt-Tab>", "copilot#Accept('<CR>')", { expr=true, silent=true })
+vim.api.nvim_set_keymap("i", "<M-CR>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

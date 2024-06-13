@@ -20,6 +20,10 @@ lsp.on_attach(function(client, bufnr)
         vim.diagnostic.open_float(nil, opts)
       end
     })
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
+      command = 'silent! EslintFixAll',
+    })
 end)
 
 

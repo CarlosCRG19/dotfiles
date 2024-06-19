@@ -10,7 +10,7 @@ alias rbserver="rails server --binding 0.0.0.0 --port 3000"
 alias rbgraph="bundle exec rake graphql:dump_schemas"
 
 alias flowwer="cd ~/Desktop/flowwer/"
-alias diary="cd ~/Desktop/flowwer/diary && nvim \"diary-$(date --rfc-3339=date)-$(date +%a).md\""
+#alias diary="cd ~/Desktop/flowwer/diary && nvim \"diary-$(date --rfc-3339=date)-$(date +%a).md\""
 
 alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd+${index}"; unset index

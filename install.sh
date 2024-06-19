@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 OS="$(uname -s)"
 
@@ -27,7 +27,11 @@ case "$OS" in
         cp -rf "$DOTFILES/fonts" "$XDG_DATA_HOME/fonts"
         ;;
     Darwin)
-        echo "macOS detected, no additional operations needed."
+        rm -rf "$XDG_CONFIG_HOME/yabai"
+        ln -s "$DOTFILES/yabai" "$XDG_CONFIG_HOME"
+
+        rm -rf "$XDG_CONFIG_HOME/skhd"
+        ln -s "$DOTFILES/skhd" "$XDG_CONFIG_HOME"
         ;;
     *)
         echo "Unsupported OS: $OS"

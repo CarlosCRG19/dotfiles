@@ -1,8 +1,12 @@
-require("remaps")
-require("sets")
-require("plugins")
+require("core.launch")
+require("core.options")
+require("core.keymaps")
 
-vim.opt.guicursor="n-v:block,i:ver100"
-
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+spec("plugins.kanagawa")
+spec("plugins.nvim-tree")
+spec("plugins.bufferline")
+spec("plugins.ibl")
+spec("plugins.lualine")
+spec("plugins.telescope")
+spec("plugins.treesitter")
+require("core.lazy")

@@ -1,0 +1,15 @@
+[x] bufferline.lua
+[ ] go.lua
+[ ] lsp.lua
+[ ] nvim-autopairs.lua
+[ ] nvim-ts-autotag.lua
+[ ] copilot.lua
+[x] ibl.lua
+[x] lualine.lua
+[ ] nvim-neotest.lua
+[ ] telescope.lua
+[ ] gitsigns.lua
+[x] kanagawa.lua
+[ ] null-ls.lua
+[x] nvim-tree.lua
+[ ] treesitter.lua

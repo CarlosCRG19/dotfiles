@@ -43,8 +43,8 @@ then
     pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
 fi
 
-if [ $(command -v "fzf") ];
-then
-    source /usr/share/fzf/completion.zsh
-    source /usr/share/fzf/key-bindings.zsh
-fi
+# if [ $(command -v "fzf") ];
+# then
+#     source /usr/share/fzf/completion.zsh
+#     source /usr/share/fzf/key-bindings.zsh
+# fi

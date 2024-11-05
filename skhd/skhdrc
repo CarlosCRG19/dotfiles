@@ -39,3 +39,4 @@ alt + shift - 6 : yabai -m window --space 6
 alt + shift - 7 : yabai -m window --space 7
 
 alt - t : yabai -m window --toggle split
+alt - b : yabai -m space --balance

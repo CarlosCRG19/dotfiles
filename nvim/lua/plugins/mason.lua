@@ -1,8 +1,15 @@
-local M = {
+return {
   "williamboman/mason.nvim",
-  config = function()
-    require("mason").setup()
-  end
+  cmd = { "Mason", "MasonInstall", "MasonUpdate" },
+  event = "VeryLazy", -- or "BufReadPre"
+  opts = {
+    ui = {
+      icons = {
+        package_installed = "✓",
+        package_pending = "➜",
+        package_uninstalled = "✗",
+      },
+    },
+  },
 }
 
-return M

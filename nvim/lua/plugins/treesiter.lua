@@ -27,6 +27,9 @@ local M = {
       endwise = {
         enable = true,
       },
+      playground = {
+        enable = true,
+      }
     })
   end
 }

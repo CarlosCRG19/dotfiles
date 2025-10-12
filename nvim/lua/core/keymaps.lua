@@ -7,8 +7,8 @@ local opts = { noremap = true, silent = true }
 keymap("i", "jk", "<Esc>", opts)
 keymap("v", "jk", "<Esc>", opts)
 
-keymap("n", "<S-j>", "<S-}>" , opts)
-keymap("n", "<S-k>", "<S-{>" , opts)
+keymap("n", "<S-j>", "<S-}>", opts)
+keymap("n", "<S-k>", "<S-{>", opts)
 
 keymap("n", "<leader>|", "<C-w>v", opts)
 
@@ -21,6 +21,8 @@ keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
 -- Copy to clipboard
+keymap("v", "<leader>y", '"+y', opts)
+keymap("v", "<leader>Y", '"+Y', opts)
 keymap("n", "<leader>y", '"+y', opts)
 keymap("v", "<leader>y", '"+y', opts)
 keymap("v", "<leader>Y", '"+Y', opts)
@@ -33,10 +35,13 @@ keymap("n", "<leader>P", '"+P', opts)
 keymap("n", "<S-l>", ":bn <CR>", opts)
 keymap("n", "<S-h>", ":bp <CR>", opts)
 
-keymap("n", "<leader>b", "<CMD>NvimTreeToggle<CR>")
+-- keymap("n", "<leader>b", "<CMD>NvimTreeToggle<CR>")
 
 -- Telescope
 keymap("n", "<leader>ff", "<CMD>Telescope find_files<CR>")
 keymap("n", "<leader>fg", "<CMD>Telescope live_grep<CR>")
 keymap("n", "<leader>fb", "<CMD>Telescope buffers<CR>")
 keymap("n", "<leader>fh", "<CMD>Telescope help_tags<CR>")
+
+-- Undotree
+keymap("n", "<leader>u", "<CMD>UndotreeToggle<CR>")

@@ -1,4 +1,4 @@
-vim.lsp.enable("pyrefly")
+vim.lsp.enable("pyright")
 vim.lsp.enable("luals")
 
 -- Define LSP-related keymaps
